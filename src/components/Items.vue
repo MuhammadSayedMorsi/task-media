@@ -80,6 +80,8 @@ export default {
         font-size: 12px
         text-align: center
         line-height: 25px
+        @media(max-width: 767px)
+          bottom: 30px
 
         &::before
           content: ''

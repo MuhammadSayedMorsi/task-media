@@ -10,7 +10,7 @@
     </v-img>
     <v-card-title>
       <div class="display-1 mb-2">
-        <p class="par">Title video lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor…</p>
+        <p class="par">{{ blogcontent }}</p>
       </div>
       <!-- <div class="title font-weight-regular grey--text">
         Monday, 12:30 PM, Mostly Sunny
@@ -31,11 +31,11 @@
         ></v-img>
       </v-avatar>
 
-      <span class="n__views">4.5 . 43 views</span>
+      <span class="n__views">{{ views }}</span>
 
-      <span class="premium">Premium</span>
+      <span class="premium">{{textPtext}}</span>
 
-      <span class="heart">18</span>
+      <span class="heart">{{18}}</span>
     </v-row>
   </v-card>
 </template>
@@ -46,7 +46,11 @@
 export default {
   data: function () {
     return {
-      star: star
+      star: star,
+      blogcontent: 'Title video lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor…',
+      views: '4.5 . 43 views',
+      textPtext:'Premium',
+      Nofhearts: '18'
     }
   }
 }
@@ -98,9 +102,10 @@ export default {
         background-image: url('../assets/heart.svg')
         width: 14px
         height: 14px
-.v-image__image--cover
-  border-radius: 30px
 .v-sheet.v-card:not(.v-sheet--outlined)
   box-shadow: none
+
+.v-image
+  border-radius: 30px!important
 
 </style>

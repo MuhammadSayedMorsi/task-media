@@ -1,20 +1,14 @@
 <template>
   <div class="wrap_list">
     <ul class="un_list">
-      <li>
-        {{listTitle}}
-      </li>
-      <li>
-        {{listTitle}}
+      <li v-for="list in listTitle" :key="list.id">
+        {{list}}
       </li>
     </ul>
 
     <ul class="un_list">
-      <li>
-        {{listTitle}}
-      </li>
-      <li>
-        {{listTitle}}
+      <li v-for="list in listTitle" :key="list.id">
+        {{list}}
       </li>
     </ul>
   </div>
@@ -25,7 +19,7 @@
     name: 'buttonList',
     data: function () {
       return {
-        listTitle: 'Digital Advertising '
+        listTitle: ['Digital Advertising', 'Digital Advertising', 'Digital Advertising']
       }
     }
   }
